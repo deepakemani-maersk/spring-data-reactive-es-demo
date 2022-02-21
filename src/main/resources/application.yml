@@ -1,0 +1,20 @@
+ELASTICSEARCH_API_KEY:
+ELASTICSEARCH_HOST: localhost:9200
+PROFILE: local
+
+spring:
+  application:
+    name: spring-data-reactive-es-demo
+  elasticsearch:
+    host: ${ELASTICSEARCH_HOST}
+    api-key: ${ELASTICSEARCH_API_KEY}
+  profiles:
+    active: ${PROFILE}
+
+server:
+  port: 8088
+
+
+logging:
+  level:
+    org.springframework.data.elasticsearch.client.WIRE: trace
